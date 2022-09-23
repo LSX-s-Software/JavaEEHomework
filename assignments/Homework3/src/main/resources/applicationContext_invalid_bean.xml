@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="noClass">
+        <property name="id" value="1" />
+    </bean>
+    <bean id="invalidClass" class="org.example.BookServiceImpl_foo">
+    </bean>
+    <bean id="noValue" class="org.example.BookServiceImpl">
+        <property name="id" />
+    </bean>
+    <bean id="noRef" class="org.example.BookServiceImpl">
+        <property name="bookDao" />
+    </bean>
+    <bean id="noName" class="org.example.BookServiceImpl">
+        <property value="1" />
+    </bean>
+    <bean id="wrongType" class="org.example.BookServiceImpl">
+        <property name="id" value="a" />
+    </bean>
+</beans>

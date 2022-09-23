@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="bookService" class="org.example.BookServiceImpl" init-method="init">
+        <property name="bookDao" ref="bookDao" />
+        <property name="id" value="1" />
+        <property name="aBoolean" value="true" />
+        <property name="aFloat" value="1.1" />
+        <property name="aDouble" value="1.2" />
+        <property name="aLong" value="1" />
+        <property name="aShort" value="1" />
+        <property name="aByte" value="1" />
+        <property name="aChar" value="a" />
+        <property name="name" value="bookService1" />
+    </bean>
+
+    <bean id="bookDao" class="org.example.BookDaoImpl" />
+</beans>
